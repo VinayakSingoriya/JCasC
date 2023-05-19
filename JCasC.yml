@@ -38,7 +38,7 @@ credentials:
 
 jobs:
   - script: >
-      job('demo') {
+      job('freestyle-job') {
           steps {
             shell("""
                 echo "The current build number is \$BUILD_NUMBER"
@@ -51,7 +51,7 @@ jobs:
       }
 
   - script: >
-      pipelineJob('github-demo') {
+      pipelineJob('pipeline-job') {
           definition {
               cpsScm {
                   scm {
